@@ -1,0 +1,36 @@
+---
+import DrawnXLogo from "@/components/DrawnXLogo.astro"
+import LiteYouTube from "@/components/LiteYouTube.astro"
+import Typography from "@/components/Typography.astro"
+---
+
+<section class="mt-10 w-full overflow-hidden px-2 pb-7 md:pb-20 md:pt-20">
+	<!-- <Typography as="h3" variant="h3" color="white" class:list={"text-center"}>
+		Presentación
+	</Typography> -->
+
+	<!-- <Typography
+		as="p"
+		variant="body"
+		color="neutral"
+		class:list={"mx-auto mt-4 max-w-[250px] text-wrap text-center"}
+	>
+		Vuelve a ver la presentación desde el Teatro Victoria
+	</Typography> -->
+
+	<div class="relative flex flex-col gap-5 md:gap-16">
+		<!-- <DrawnXLogo
+			class:list={"absolute inset-0 -z-10 m-auto scale-125 select-none drop-shadow-[0_0_40px_rgba(213,255,0,1)]"}
+		/> -->
+		<LiteYouTube
+			videoId="YpOu9f4wyYU"
+			backgroundImage="/public/img/Video1.png"
+			title="Abatiendo al gigante"
+		/>
+		<LiteYouTube
+			videoId="0DN-9Dr6cjM"
+			backgroundImage="/public/img/unan.png"
+			title="Trastorno dismórfico corporal"
+		/>
+	</div>
+</section>

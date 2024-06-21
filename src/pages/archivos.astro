@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+const files = [
+	{
+		name: "Guión Audiovisual Final",
+		url: "https://docs.google.com/document/d/1By1xLU9ugRBYLWPW-cyDYmG1WbnPI4T8",
+	},
+	{
+		name: "Informe Técnico",
+		url: "https://docs.google.com/document/d/1ILlUSydz7bJJ-hql3OpBkJxF5ZF_NbCm",
+	},
+	{
+		name: "Organigrama",
+		url: "https://docs.google.com/document/d/1F44KmuTCRaNkypDJMdRmA7n2KMECrCkb",
+	},
+	,
+	{
+		name: "Segmento y Artículos Grupo 4 Final",
+		url: "https://docs.google.com/document/d/12JjgJbN8VPUgJun7RIzEfRkoXvkbfS7R",
+	},
+]
+---
+
+<Layout title="Trastorno Dismórfico Corporal" description="Trastorno Dismórfico Corporal">
+	<main class="mb-10 flex flex-col items-center justify-center gap-5 text-white">
+		{files.map((file) => <iframe src={`${file?.url}`}>Tu navegador no soporta iframes.</iframe>)}
+	</main>
+</Layout>
+
+<style>
+	iframe {
+		padding-top: 20px;
+		width: 100%;
+		height: 750px;
+	}
+</style>

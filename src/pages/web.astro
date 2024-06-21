@@ -1,0 +1,46 @@
+---
+import Action from "@/components/Action.astro"
+import Layout from "@/layouts/Layout.astro"
+---
+
+<Layout title="Trastorno Dismórfico Corporal" description="Trastorno Dismórfico Corporal">
+	<main class="flex flex-col items-center justify-center text-white">
+		<div class="web-image h-[230px] w-[90%] max-w-[80%] md:h-[600px] md:w-full md:max-w-full">
+			<img src="/public/img/web.png" alt="" />
+			<Action
+				class="mt-7 text-center"
+				href="https://sites.google.com/view/abatiendoalgigante/home"
+				aria-label="Visitar la página web"
+				as="a"
+			>
+				Visitar
+			</Action>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.web-image {
+		background-color: #000;
+		position: relative;
+		display: block;
+		contain: content;
+		background-position: center center;
+		background-size: cover;
+		cursor: pointer;
+		aspect-ratio: 16/9;
+		border: 2px solid var(--color-accent);
+		transition: all 0.3s ease;
+		box-shadow: 0px 0px 15px rgb(212, 255, 0, 0.1);
+		border-radius: 10px;
+		margin-top: 5rem;
+	}
+
+	a {
+		position: absolute;
+		top: 0;
+		left: 2rem;
+	}
+</style>
+
+<!-- https://sites.google.com/view/abatiendoalgigante/home -->

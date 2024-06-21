@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import PresentationVideo from "@/sections/PresentationVideo.astro"
+
+const images = [
+	{
+		name: "image1",
+		located: "/public/img/image1.png",
+	},
+	{
+		name: "image2",
+		located: "/public/img/image2.png",
+	},
+	{
+		name: "image3",
+		located: "/public/img/image3.png",
+	},
+	{
+		name: "image4",
+		located: "/public/img/image4.png",
+	},
+	{
+		name: "image5",
+		located: "/public/img/image5.png",
+	},
+	{
+		name: "image6",
+		located: "/public/img/image6.png",
+	},
+	{
+		name: "image7",
+		located: "/public/img/image7.png",
+	},
+	{
+		name: "image8",
+		located: "/public/img/image8.png",
+	},
+]
+---
+
+<Layout title="Trastorno Dismórfico Corporal" description="Trastorno Dismórfico Corporal">
+	<main class="flex flex-col items-center justify-center text-white">
+		<PresentationVideo />
+		<div class="mb-5 flex w-[96%] flex-wrap justify-between gap-y-10 md:w-full">
+			{
+				images.map(({ located, name }) => (
+					<div class="web-image h-[200px] w-[48%] md:h-[400px]">
+						<img class="h-auto w-full" src={`${located}`} alt={name} />
+					</div>
+				))
+			}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.web-image {
+		background-color: #000;
+		position: relative;
+		display: block;
+		contain: content;
+		background-position: center center;
+		background-size: cover;
+		cursor: pointer;
+		aspect-ratio: 16/9;
+		border: 2px solid var(--color-accent);
+		transition: all 0.3s ease;
+		box-shadow: 0px 0px 15px rgb(212, 255, 0, 0.1);
+		border-radius: 10px;
+		object-fit: cover;
+	}
+</style>
